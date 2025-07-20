@@ -21,7 +21,7 @@ An interactive, dynamic JSON Schema Builder built using **ReactJS**, designed fo
 
 ## 📺 Demo
 
-> [Live Hosted Demo on Vercel](https://github.com/SHAKSHIY/JSON-Schema-Builder)  
+> [Live Hosted Demo on Vercel](https://json-schema-builder-topaz.vercel.app/)  
 
 ---
 
