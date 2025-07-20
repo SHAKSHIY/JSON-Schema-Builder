@@ -41,6 +41,9 @@ json-schema-builder/
 ├── package.json
 └── README.md
 
+
+---
+
 ## 🛠️ Tech Stack
 - ReactJS
 - React Hooks
