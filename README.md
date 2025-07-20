@@ -2,7 +2,8 @@
 
 An interactive, dynamic JSON Schema Builder built using **ReactJS**, designed for creating complex and nested JSON schemas visually. Built as part of the **HROne Frontend Intern Hiring Task**.
 
-![Screenshot](<img width="1056" height="575" alt="image" src="https://github.com/user-attachments/assets/776da2db-8596-40c3-8a14-48779eb46fe2" />)
+<img width="1056" height="575" alt="image" src="https://github.com/user-attachments/assets/43b0591a-9ac7-45a7-a72c-5f50febd31be" />
+
 
 ---
 
