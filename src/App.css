@@ -1,38 +1,171 @@
-.App {
-  text-align: center;
+:root {
+  --primary-color: #4f46e5;
+  --primary-hover: #4338ca;
+  --secondary-color: #6b7280;
+  --bg-page: #f9fafb;
+  --bg-card: #ffffff;
+  --border-color: #e5e7eb;
+  --text-color: #374151;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Global reset & body */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-page);
+  color: var(--text-color);
+  line-height: 1.5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* App container */
+.builder-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Controls */
+.controls {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.btn {
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn:active {
+  transform: scale(0.98);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+}
+.btn-primary:hover {
+  background: var(--primary-hover);
+}
+
+.btn-secondary {
+  background: var(--secondary-color);
+  color: #fff;
+}
+.btn-secondary:hover {
+  background: #4b5563;
+}
+
+/* Field list wrapper */
+.field-list {
+  margin-left: 8px;
+  padding-left: 16px;
+  border-left: 2px solid var(--border-color);
+}
+
+/* Each row “card” */
+.field-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  transition: box-shadow 0.2s;
+}
+.field-row:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Inputs & selects */
+.field-row > input,
+.field-row > select {
+  padding: 6px 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 0.95rem;
+  color: var(--text-color);
+  flex: 1 1 140px;
+  min-width: 120px;
+}
+
+/* Add/remove buttons */
+.btn-add,
+.btn-remove {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.btn-add {
+  background: #10b981;  /* emerald-500 */
+  color: #fff;
+}
+.btn-add:hover {
+  background: #059669;  /* emerald-600 */
+}
+.btn-remove {
+  background: #ef4444;  /* red-500 */
+  color: #fff;
+}
+.btn-remove:hover {
+  background: #dc2626;  /* red-600 */
+}
+
+/* JSON preview */
+.json-preview {
+  background: #111827;
+  color: #d1d5db;
+  padding: 16px;
+  border-radius: 6px;
+  font-family: Menlo, monospace;
+  font-size: 0.9rem;
+  max-height: 500px;
+  overflow: auto;
+  border: 1px solid #37415150;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .controls {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  .field-row {
+    flex-direction: column;
+    align-items: stretch;
   }
+  .field-row > input,
+  .field-row > select,
+  .btn-add,
+  .btn-remove {
+    width: 100%;
+    min-width: auto;
+  }
+}
+/* Center the main builder heading */
+.builder-container > h1 {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 24px; /* match your spacing */
 }
